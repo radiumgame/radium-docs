@@ -1,0 +1,249 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Vector2 - Radium Documentation</title>
+        <!-- Custom HTML head -->
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="icon" href="../../favicon.svg">
+        <link rel="shortcut icon" href="../../favicon.png">
+        <link rel="stylesheet" href="../../css/variables.css">
+        <link rel="stylesheet" href="../../css/general.css">
+        <link rel="stylesheet" href="../../css/chrome.css">
+        <link rel="stylesheet" href="../../css/print.css" media="print">
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../../fonts/fonts.css">
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../../highlight.css">
+        <link rel="stylesheet" href="../../tomorrow-night.css">
+        <link rel="stylesheet" href="../../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+    </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "../../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded "><a href="../../install.html"><strong aria-hidden="true">1.</strong> Installing Radium</a></li><li class="chapter-item expanded "><a href="../../editor/index.html"><strong aria-hidden="true">2.</strong> Editor Reference</a></li><li class="chapter-item expanded "><a href="../../scripting/index.html"><strong aria-hidden="true">3.</strong> Scripting Reference</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../scripting/GameObject.html"><strong aria-hidden="true">3.1.</strong> GameObject</a></li><li class="chapter-item expanded "><a href="../../scripting/Component.html"><strong aria-hidden="true">3.2.</strong> Component</a></li><li class="chapter-item expanded "><div><strong aria-hidden="true">3.3.</strong> Math</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../scripting/math/Vector2.html" class="active"><strong aria-hidden="true">3.3.1.</strong> Vector2</a></li><li class="chapter-item expanded "><a href="../../scripting/math/Vector3.html"><strong aria-hidden="true">3.3.2.</strong> Vector3</a></li></ol></li></ol></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">Radium Documentation</h1>
+
+                    <div class="right-buttons">
+                        <a href="../../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="properties"><a class="header" href="#properties">Properties</a></h1>
+<hr>
+<p>x (float)<br>
+y (float)</p>
+<br>
+<h1 id="constructor"><a class="header" href="#constructor">Constructor</a></h1>
+<hr>
+<a href="./Vector2.html">Vector2</a>(x : float, y : float)
+<br>
+<h1 id="operations"><a class="header" href="#operations">Operations</a></h1>
+<hr>
+<p>+, -, *, /, +=, -=, *=, /=, ==, !=</p>
+<br>
+<h1 id="methods"><a class="header" href="#methods">Methods</a></h1>
+<hr>
+<h2 id="array"><a class="header" href="#array"><strong>array()</strong></a></h2>
+<p>Returns the vector as an array.
+<br>
+<strong>Returns: [x, y]</strong>
+<br>
+<strong>Return Type: Array[2]</strong></p>
+<h2 id="length"><a class="header" href="#length"><strong>length()</strong></a></h2>
+<p>Returns the length of the vector. Simply, the square root of the sum of the squares of the components.
+<br>
+<strong>Returns: <code>sqrt(x^2 + y^2)</code></strong>
+<br>
+<strong>Return Type: float</strong></p>
+<h2 id="normalize"><a class="header" href="#normalize"><strong>normalize()</strong></a></h2>
+<p>Returns the vector / length of the vector. Making the value between 0 and 1.
+<br>
+<strong>Returns: <code>Vector2(x / length, y / length)</code></strong>
+<br>
+<strong>Return Type: <a href="./Vector2.html">Vector2</a></strong>
+vector`</p>
+<h2 id="lerpother--vector2-t--float"><a class="header" href="#lerpother--vector2-t--float"><strong>lerp(other : <a href="./Vector2.html">Vector2</a>, t : float)</strong></a></h2>
+<p>Returns the transition between two vectors by t. t is between 0 and 1.
+<br>
+<strong>Returns: <code>Vector2(x + (other.x - x) * t, y + (other.y - y) * t)</code></strong>
+<br>
+<strong>Return Type: <a href="./Vector2.html">Vector2</a></strong></p>
+<h2 id="dotother--vector2"><a class="header" href="#dotother--vector2"><strong>dot(other : <a href="./Vector2.html">Vector2</a>)</strong></a></h2>
+<p>Returns the dot product of two vectors. The dot product is the sum of the products of the components.
+<br>
+<strong>Returns: <code>x * other.x + y * other.y</code></strong>
+<br>
+<strong>Return Type: float</strong></p>
+<h2 id="distanceother--vector2"><a class="header" href="#distanceother--vector2"><strong>distance(other : <a href="./Vector2.html">Vector2</a>)</strong></a></h2>
+<p>Returns the distance between two vectors.
+<br>
+<strong>Returns: <code>sqrt((x - other.x)^2 + (y - other.y)^2)</code></strong>
+<br>
+<strong>Return Type: float</strong></p>
+<h2 id="crossother--vector2"><a class="header" href="#crossother--vector2"><strong>cross(other : <a href="./Vector2.html">Vector2</a>)</strong></a></h2>
+<p>Returns the cross product of two vectors.
+<br>
+<strong>Returns: <code>Vector2(x * other.y - y * other.x, y * other.x - x * other.y)</code></strong>
+<br>
+<strong>Return Type: <a href="./Vector2.html">Vector2</a></strong></p>
+<br>
+<h1 id="class-methods"><a class="header" href="#class-methods">Class Methods</a></h1>
+<hr>
+<h2 id="zero"><a class="header" href="#zero"><strong>zero()</strong></a></h2>
+<p>Returns a zero vector.
+<br>
+<strong>Returns: <code>Vector2(0, 0, 0)</code></strong>
+<br>
+<strong>Return Type: <a href="./Vector2.html">Vector2</a></strong></p>
+<h2 id="one"><a class="header" href="#one"><strong>one()</strong></a></h2>
+<p>Returns a one vector.
+<br>
+<strong>Returns: <code>Vector2(1, 1, 1)</code></strong>
+<br>
+<strong>Return Type: <a href="./Vector2.html">Vector2</a></strong></p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../../scripting/Component.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+                            <a rel="next" href="../../scripting/math/Vector3.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../../scripting/Component.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                    <a rel="next" href="../../scripting/math/Vector3.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+        <script type="text/javascript">
+            window.playground_copyable = true;
+        </script>
+        <script src="../../elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../searcher.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+    </body>
+</html>

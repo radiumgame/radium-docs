@@ -1,0 +1,255 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Particle System - Radium Documentation</title>
+        <!-- Custom HTML head -->
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="icon" href="../../favicon.svg">
+        <link rel="shortcut icon" href="../../favicon.png">
+        <link rel="stylesheet" href="../../css/variables.css">
+        <link rel="stylesheet" href="../../css/general.css">
+        <link rel="stylesheet" href="../../css/chrome.css">
+        <link rel="stylesheet" href="../../css/print.css" media="print">
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../../fonts/fonts.css">
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../../highlight.css">
+        <link rel="stylesheet" href="../../tomorrow-night.css">
+        <link rel="stylesheet" href="../../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+    </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "../../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded "><a href="../../welcome.html"><strong aria-hidden="true">1.</strong> Welcome!</a></li><li class="chapter-item expanded "><a href="../../install.html"><strong aria-hidden="true">2.</strong> Installing Radium</a></li><li class="chapter-item expanded "><a href="../../editor/index.html"><strong aria-hidden="true">3.</strong> Editor Reference</a></li><li class="chapter-item expanded "><a href="../../scripting/index.html"><strong aria-hidden="true">4.</strong> Scripting Reference</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../scripting/Transform.html"><strong aria-hidden="true">4.1.</strong> Transform</a></li><li class="chapter-item expanded "><a href="../../scripting/GameObject.html"><strong aria-hidden="true">4.2.</strong> GameObject</a></li><li class="chapter-item expanded "><a href="../../scripting/Component.html"><strong aria-hidden="true">4.3.</strong> Components</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../scripting/components/MeshFilter.html"><strong aria-hidden="true">4.3.1.</strong> MeshFilter</a></li><li class="chapter-item expanded "><a href="../../scripting/components/MeshRenderer.html"><strong aria-hidden="true">4.3.2.</strong> Mesh Renderer</a></li><li class="chapter-item expanded "><a href="../../scripting/components/Camera.html"><strong aria-hidden="true">4.3.3.</strong> Camera</a></li><li class="chapter-item expanded "><a href="../../scripting/components/Light.html"><strong aria-hidden="true">4.3.4.</strong> Light</a></li><li class="chapter-item expanded "><a href="../../scripting/components/Rigidbody.html"><strong aria-hidden="true">4.3.5.</strong> Rigidbody</a></li><li class="chapter-item expanded "><a href="../../scripting/components/Image.html"><strong aria-hidden="true">4.3.6.</strong> Image</a></li><li class="chapter-item expanded "><a href="../../scripting/components/Panel.html"><strong aria-hidden="true">4.3.7.</strong> Panel</a></li><li class="chapter-item expanded "><a href="../../scripting/components/Text.html"><strong aria-hidden="true">4.3.8.</strong> Text</a></li><li class="chapter-item expanded "><a href="../../scripting/components/ParticleSystem.html" class="active"><strong aria-hidden="true">4.3.9.</strong> Particle System</a></li></ol></li><li class="chapter-item expanded "><a href="../../scripting/math.html"><strong aria-hidden="true">4.4.</strong> Math</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../scripting/math/Vector2.html"><strong aria-hidden="true">4.4.1.</strong> Vector2</a></li><li class="chapter-item expanded "><a href="../../scripting/math/Vector3.html"><strong aria-hidden="true">4.4.2.</strong> Vector3</a></li></ol></li><li class="chapter-item expanded "><a href="../../scripting/graphics.html"><strong aria-hidden="true">4.5.</strong> Graphics</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../scripting/graphics/Color.html"><strong aria-hidden="true">4.5.1.</strong> Color</a></li><li class="chapter-item expanded "><a href="../../scripting/graphics/Material.html"><strong aria-hidden="true">4.5.2.</strong> Material</a></li><li class="chapter-item expanded "><a href="../../scripting/graphics/Mesh.html"><strong aria-hidden="true">4.5.3.</strong> Mesh</a></li></ol></li></ol></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">Radium Documentation</h1>
+
+                    <div class="right-buttons">
+                        <a href="../../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="properties"><a class="header" href="#properties">Properties</a></h1>
+<hr>
+<p>particleOffset (<a href="../math/Vector3.html">Vector3</a>)<br>
+randomOffset (bool)<br>
+offsetRange1 (<a href="../math/Vector3.html">Vector3</a>)<br>
+offsetRange2 (<a href="../math/Vector3.html">Vector3</a>)<br>
+particleRotation (float)<br>
+randomRotation (bool)<br>
+rotationRange (<a href="../math/Vector2.html">Vector2</a>)<br>
+particleSize (<a href="../math/Vector2.html">Vector2</a>)
+randomSize (bool)<br>
+sizeRange (<a href="../math/Vector2.html">Vector2</a>)<br>
+lifetime (float)<br>
+randomLifetime (bool)<br>
+lifetimeRange (<a href="../math/Vector2.html">Vector2</a>)<br>
+emissionRate (float)<br>
+particleSpeed (<a href="../math/Vector3.html">Vector3</a>)
+randomSpeed (bool)<br>
+speedRange1 (<a href="../math/Vector3.html">Vector3</a>)<br>
+speedRange2 (<a href="../math/Vector3.html">Vector3</a>)<br>
+blendType (string)<br>
+transparent (bool)<br>
+atlasSize (<a href="../math/Vector2.html">Vector2</a>)<br>
+color (<a href="../graphics/Color.html">Color</a>)<br>
+maxParticles (int)</p>
+<br>
+<h1 id="constructor"><a class="header" href="#constructor">Constructor</a></h1>
+<hr>
+Empty constructor
+<br>
+<br>
+<h1 id="methods"><a class="header" href="#methods">Methods</a></h1>
+<hr>
+<h2 id="setparticleoffsetoffset--vector3"><a class="header" href="#setparticleoffsetoffset--vector3"><strong>setParticleOffset(offset : <a href="../math/Vector3.html">Vector3</a>)</strong></a></h2>
+<p>Sets the position offset from the base position of the <a href="../GameObject.html">GameObject</a>.</p>
+<h2 id="setrandomoffsetrandomoffset--bool"><a class="header" href="#setrandomoffsetrandomoffset--bool"><strong>setRandomOffset(randomOffset : bool)</strong></a></h2>
+<p>Decides whether the position offset should be random or not. The range is based off of offsetRange1 and offsetRange2.</p>
+<h2 id="setoffsetrangeoffset1--vector3-offset2--vector3"><a class="header" href="#setoffsetrangeoffset1--vector3-offset2--vector3"><strong>setOffsetRange(offset1 : <a href="../math/Vector3.html">Vector3</a>, offset2 : <a href="../math/Vector3.html">Vector3</a>)</strong></a></h2>
+<p>Sets the range of the position offset. This is only used if randomOffset is set to true.</p>
+<h2 id="setparticlerotationrotation--float"><a class="header" href="#setparticlerotationrotation--float"><strong>setParticleRotation(rotation : float)</strong></a></h2>
+<p>Sets the rotation of the particle.</p>
+<h2 id="setrandomrotationrandomrotation--bool"><a class="header" href="#setrandomrotationrandomrotation--bool"><strong>setRandomRotation(randomRotation : bool)</strong></a></h2>
+<p>Decides whether the rotation should be random or not. The range is based off of rotationRange.</p>
+<h2 id="setrotationrangerotationrange--vector2"><a class="header" href="#setrotationrangerotationrange--vector2"><strong>setRotationRange(rotationRange : <a href="../math/Vector2.html">Vector2</a>)</strong></a></h2>
+<p>Sets the range of the rotation. This is only used if randomRotation is set to true.</p>
+<h2 id="setparticlesizesize--vector2"><a class="header" href="#setparticlesizesize--vector2"><strong>setParticleSize(size : <a href="../math/Vector2.html">Vector2</a>)</strong></a></h2>
+<p>Sets the size of the particle.</p>
+<h2 id="setrandomsizerandomsize--bool"><a class="header" href="#setrandomsizerandomsize--bool"><strong>setRandomSize(randomSize : bool)</strong></a></h2>
+<p>Decides whether the size should be random or not. The range is based off of sizeRange.</p>
+<h2 id="setsizerangesizerange--vector2"><a class="header" href="#setsizerangesizerange--vector2"><strong>setSizeRange(sizeRange : <a href="../math/Vector2.html">Vector2</a>)</strong></a></h2>
+<p>Sets the range of the size. This is only used if randomSize is set to true.</p>
+<h2 id="setlifetimelifetime--float"><a class="header" href="#setlifetimelifetime--float"><strong>setLifetime(lifetime : float)</strong></a></h2>
+<p>Sets the lifetime of the particle in seconds.</p>
+<h2 id="setrandomlifetimerandomlifetime--bool"><a class="header" href="#setrandomlifetimerandomlifetime--bool"><strong>setRandomLifetime(randomLifetime : bool)</strong></a></h2>
+<p>Decides whether the lifetime should be random or not. The range is based off of lifetimeRange.</p>
+<h2 id="setlifetimerangelifetimerange--vector2"><a class="header" href="#setlifetimerangelifetimerange--vector2"><strong>setLifetimeRange(lifetimeRange : <a href="../math/Vector2.html">Vector2</a>)</strong></a></h2>
+<p>Sets the range of the lifetime. This is only used if randomLifetime is set to true.</p>
+<h2 id="setemissionrateemissionrate--float"><a class="header" href="#setemissionrateemissionrate--float"><strong>setEmissionRate(emissionRate : float)</strong></a></h2>
+<p>Sets the emission rate of the particle in particles per second.</p>
+<h2 id="setparticlespeedspeed--vector3"><a class="header" href="#setparticlespeedspeed--vector3"><strong>setParticleSpeed(speed : <a href="../math/Vector3.html">Vector3</a>)</strong></a></h2>
+<p>Sets the speed of the particle in 3 directions.</p>
+<h2 id="setrandomspeedrandomspeed--bool"><a class="header" href="#setrandomspeedrandomspeed--bool"><strong>setRandomSpeed(randomSpeed : bool)</strong></a></h2>
+<p>Decides whether the speed should be random or not. The range is based off of speedRange1 and speedRange2.</p>
+<h2 id="setspeedrangespeedrange1--vector3-speedrange2--vector3"><a class="header" href="#setspeedrangespeedrange1--vector3-speedrange2--vector3"><strong>setSpeedRange(speedRange1 : <a href="../math/Vector3.html">Vector3</a>, speedRange2 : <a href="../math/Vector3.html">Vector3</a>)</strong></a></h2>
+<p>Sets the range of the speed. This is only used if randomSpeed is set to true.</p>
+<h2 id="setblendtypeblendtype--string"><a class="header" href="#setblendtypeblendtype--string"><strong>setBlendType(blendType : string)</strong></a></h2>
+<p>Sets the blend type of the particle. Valid blend types are:<br></p>
+<ul>
+<li>Alpha</li>
+<li>Additive</li>
+</ul>
+<h2 id="settransparenttransparent--bool"><a class="header" href="#settransparenttransparent--bool"><strong>setTransparent(transparent : bool)</strong></a></h2>
+<p>Sets whether the particle should be transparent or not. This determines the render order of the particles.</p>
+<h2 id="setatlassizeatlassize--vector2"><a class="header" href="#setatlassizeatlassize--vector2"><strong>setAtlasSize(atlasSize : <a href="../math/Vector2.html">Vector2</a>)</strong></a></h2>
+<p>Sets the size of the texture atlas.</p>
+<h2 id="setcolorcolor--color"><a class="header" href="#setcolorcolor--color"><strong>setColor(color : <a href="../graphics/Color.html">Color</a>)</strong></a></h2>
+<p>Sets the color of the particle.</p>
+<h2 id="setmaxparticlesmaxparticles--int"><a class="header" href="#setmaxparticlesmaxparticles--int"><strong>setMaxParticles(maxParticles : int)</strong></a></h2>
+<p>Sets the maximum number of particles. If the number of particles exceeds this number, the oldest particles will be destroyed.</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../../scripting/components/Text.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+                            <a rel="next" href="../../scripting/math.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../../scripting/components/Text.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                    <a rel="next" href="../../scripting/math.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+        <script type="text/javascript">
+            window.playground_copyable = true;
+        </script>
+        <script src="../../elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../searcher.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+    </body>
+</html>

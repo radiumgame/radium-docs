@@ -1,0 +1,280 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Math - Radium Documentation</title>
+        <!-- Custom HTML head -->
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="icon" href="../../favicon.svg">
+        <link rel="shortcut icon" href="../../favicon.png">
+        <link rel="stylesheet" href="../../css/variables.css">
+        <link rel="stylesheet" href="../../css/general.css">
+        <link rel="stylesheet" href="../../css/chrome.css">
+        <link rel="stylesheet" href="../../css/print.css" media="print">
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../../fonts/fonts.css">
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../../highlight.css">
+        <link rel="stylesheet" href="../../tomorrow-night.css">
+        <link rel="stylesheet" href="../../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+    </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "../../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded "><a href="../../welcome.html"><strong aria-hidden="true">1.</strong> Welcome!</a></li><li class="chapter-item expanded "><a href="../../install.html"><strong aria-hidden="true">2.</strong> Installing Radium</a></li><li class="chapter-item expanded "><a href="../../editor/index.html"><strong aria-hidden="true">3.</strong> Editor Reference</a></li><li class="chapter-item expanded "><a href="../../scripting/index.html"><strong aria-hidden="true">4.</strong> Scripting Reference</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../scripting/functions.html"><strong aria-hidden="true">4.1.</strong> Functions</a></li><li class="chapter-item expanded "><a href="../../scripting/Transform.html"><strong aria-hidden="true">4.2.</strong> Transform</a></li><li class="chapter-item expanded "><a href="../../scripting/GameObject.html"><strong aria-hidden="true">4.3.</strong> GameObject</a></li><li class="chapter-item expanded "><a href="../../scripting/Component.html"><strong aria-hidden="true">4.4.</strong> Components</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../scripting/components/MeshFilter.html"><strong aria-hidden="true">4.4.1.</strong> MeshFilter</a></li><li class="chapter-item expanded "><a href="../../scripting/components/MeshRenderer.html"><strong aria-hidden="true">4.4.2.</strong> Mesh Renderer</a></li><li class="chapter-item expanded "><a href="../../scripting/components/Camera.html"><strong aria-hidden="true">4.4.3.</strong> Camera</a></li><li class="chapter-item expanded "><a href="../../scripting/components/Light.html"><strong aria-hidden="true">4.4.4.</strong> Light</a></li><li class="chapter-item expanded "><a href="../../scripting/components/Rigidbody.html"><strong aria-hidden="true">4.4.5.</strong> Rigidbody</a></li><li class="chapter-item expanded "><a href="../../scripting/components/Image.html"><strong aria-hidden="true">4.4.6.</strong> Image</a></li><li class="chapter-item expanded "><a href="../../scripting/components/Panel.html"><strong aria-hidden="true">4.4.7.</strong> Panel</a></li><li class="chapter-item expanded "><a href="../../scripting/components/Text.html"><strong aria-hidden="true">4.4.8.</strong> Text</a></li><li class="chapter-item expanded "><a href="../../scripting/components/ParticleSystem.html"><strong aria-hidden="true">4.4.9.</strong> Particle System</a></li></ol></li><li class="chapter-item expanded "><a href="../../scripting/math.html"><strong aria-hidden="true">4.5.</strong> Math</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../scripting/math/Vector2.html"><strong aria-hidden="true">4.5.1.</strong> Vector2</a></li><li class="chapter-item expanded "><a href="../../scripting/math/Vector3.html"><strong aria-hidden="true">4.5.2.</strong> Vector3</a></li></ol></li><li class="chapter-item expanded "><a href="../../scripting/graphics.html"><strong aria-hidden="true">4.6.</strong> Graphics</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../scripting/graphics/Color.html"><strong aria-hidden="true">4.6.1.</strong> Color</a></li><li class="chapter-item expanded "><a href="../../scripting/graphics/Material.html"><strong aria-hidden="true">4.6.2.</strong> Material</a></li><li class="chapter-item expanded "><a href="../../scripting/graphics/Mesh.html"><strong aria-hidden="true">4.6.3.</strong> Mesh</a></li></ol></li></ol></li><li class="chapter-item expanded "><a href="../../shaders/index.html"><strong aria-hidden="true">5.</strong> Shaders</a></li><li><ol class="section"><li class="chapter-item expanded "><div><strong aria-hidden="true">5.1.</strong> Data Types</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../shaders/data-types/GameObject.html"><strong aria-hidden="true">5.1.1.</strong> GameObject</a></li><li class="chapter-item expanded "><a href="../../shaders/data-types/Color.html"><strong aria-hidden="true">5.1.2.</strong> Color</a></li><li class="chapter-item expanded "><a href="../../shaders/data-types/Material.html"><strong aria-hidden="true">5.1.3.</strong> Material</a></li><li class="chapter-item expanded "><a href="../../shaders/data-types/Light.html"><strong aria-hidden="true">5.1.4.</strong> Light</a></li></ol></li><li class="chapter-item expanded "><a href="../../shaders/variables.html"><strong aria-hidden="true">5.2.</strong> Variables</a></li><li class="chapter-item expanded "><div><strong aria-hidden="true">5.3.</strong> Functions</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../shaders/functions/Color.html"><strong aria-hidden="true">5.3.1.</strong> Color</a></li><li class="chapter-item expanded "><a href="../../shaders/functions/math.html" class="active"><strong aria-hidden="true">5.3.2.</strong> Math</a></li></ol></li></ol></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">Radium Documentation</h1>
+
+                    <div class="right-buttons">
+                        <a href="../../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="methods"><a class="header" href="#methods">Methods</a></h1>
+<hr>
+<h2 id="sindfloat-a"><a class="header" href="#sindfloat-a"><strong>sind(float a)</strong></a></h2>
+<p><strong>Returns: <code>sin(a * PI180)</code></strong>
+<br>
+<strong>Return Type: float</strong></p>
+<h2 id="cosdfloat-a"><a class="header" href="#cosdfloat-a"><strong>cosd(float a)</strong></a></h2>
+<p><strong>Returns: <code>cos(a * PI180)</code></strong>
+<br>
+<strong>Return Type: float</strong></p>
+<h2 id="tandfloat-a"><a class="header" href="#tandfloat-a"><strong>tand(float a)</strong></a></h2>
+<p><strong>Returns: <code>tan(a * PI180)</code></strong>
+<br>
+<strong>Return Type: float</strong></p>
+<h2 id="asindfloat-a"><a class="header" href="#asindfloat-a"><strong>asind(float a)</strong></a></h2>
+<p><strong>Returns: <code>asin(a) * 180 / PI</code></strong>
+<br>
+<strong>Return Type: float</strong></p>
+<h2 id="acosdfloat-a"><a class="header" href="#acosdfloat-a"><strong>acosd(float a)</strong></a></h2>
+<p><strong>Returns: <code>acos(a) * 180 / PI</code></strong>
+<br>
+<strong>Return Type: float</strong></p>
+<h2 id="atandfloat-a"><a class="header" href="#atandfloat-a"><strong>atand(float a)</strong></a></h2>
+<p><strong>Returns: <code>atan(a) * 180 / PI</code></strong>
+<br>
+<strong>Return Type: float</strong></p>
+<h2 id="lerpfloat-a-float-b-float-t"><a class="header" href="#lerpfloat-a-float-b-float-t"><strong>lerp(float a, float b, float t)</strong></a></h2>
+<p><strong>Returns: <code>a + (b - a) * t</code></strong>
+<br>
+<strong>Return Type: float</strong></p>
+<h2 id="clampfloat-a-float-min-float-max"><a class="header" href="#clampfloat-a-float-min-float-max"><strong>clamp(float a, float min, float max)</strong></a></h2>
+<p><strong>Returns: <code>max(min(a, max), min)</code></strong>
+<br>
+<strong>Return Type: float</strong></p>
+<h2 id="smoothstepfloat-edge1-float-edge2-float-x"><a class="header" href="#smoothstepfloat-edge1-float-edge2-float-x"><strong>smoothstep(float edge1, float edge2, float x)</strong></a></h2>
+<p><strong>Returns:</strong> </p>
+<pre><code class="language-glsl">float t = clamp((x - edge0) / (edge1 - edge0), 0.0, 1.0); 
+return t * t * (3.0 - 2.0 * t);
+</code></pre>
+<p><strong>Return Type: float</strong></p>
+<h2 id="clamp01float-a"><a class="header" href="#clamp01float-a"><strong>clamp01(float a)</strong></a></h2>
+<p><strong>Returns: <code>clamp(a, 0.0, 1.0)</code></strong>
+<br>
+<strong>Return Type: float</strong></p>
+<h2 id="clamp01vec2-a"><a class="header" href="#clamp01vec2-a"><strong>clamp01(vec2 a)</strong></a></h2>
+<p><strong>Returns: <code>vec2(clamp01(a.x), clamp01(a.y))</code></strong>
+<br>
+<strong>Return Type: vec2</strong></p>
+<h2 id="stepfloat-edge-float-x"><a class="header" href="#stepfloat-edge-float-x"><strong>step(float edge, float x)</strong></a></h2>
+<p><strong>Returns: <code>x &lt; edge ? 0.0 : 1.0</code></strong>
+<br>
+<strong>Return Type: float</strong></p>
+<h2 id="stepvec2-edge-vec2-x"><a class="header" href="#stepvec2-edge-vec2-x"><strong>step(vec2 edge, vec2 x)</strong></a></h2>
+<p><strong>Returns: <code>vec2(step(edge.x, x.x), step(edge.y, x.y))</code></strong>
+<br>
+<strong>Return Type: vec2</strong></p>
+<h2 id="stepvec3-edge-vec3-x"><a class="header" href="#stepvec3-edge-vec3-x"><strong>step(vec3 edge, vec3 x)</strong></a></h2>
+<p><strong>Returns: <code>vec3(step(edge.x, x.x), step(edge.y, x.y), step(edge.z, x.z))</code></strong>
+<br>
+<strong>Return Type: vec3</strong></p>
+<h2 id="randomfloat-seed"><a class="header" href="#randomfloat-seed"><strong>random(float seed)</strong></a></h2>
+<p><strong>Returns: <code>fract(sin(seed) * 43758.5453123)</code></strong>
+<br>
+<strong>Return Type: float</strong></p>
+<h2 id="random"><a class="header" href="#random"><strong>random()</strong></a></h2>
+<p><strong>Returns: <code>random(time)</code></strong>
+<br>
+<strong>Return Type: float</strong></p>
+<h2 id="random2dvec2-seed"><a class="header" href="#random2dvec2-seed"><strong>random2D(vec2 seed)</strong></a></h2>
+<p><strong>Returns: <code>fract(sin(dot(seed.xy, vec2(12.9898, 78.233))) * 43758.5453)</code></strong>
+<br>
+<strong>Return Type: float</strong></p>
+<h2 id="random3dvec3-seed"><a class="header" href="#random3dvec3-seed"><strong>random3D(vec3 seed)</strong></a></h2>
+<p><strong>Returns: <code>fract(sin(dot(seed.xyz, vec3(12.9898, 78.233, 144.7272))) * 43758.5453)</code></strong>
+<br>
+<strong>Return Type: float</strong></p>
+<h2 id="toobjectspacevec4-vec"><a class="header" href="#toobjectspacevec4-vec"><strong>toObjectSpace(vec4 vec)</strong></a></h2>
+<p><strong>Returns: <code>(vec * inverse(modelMatrix)).xyz</code></strong>
+<br>
+<strong>Return Type: vec3</strong></p>
+<h2 id="toobjectspacevec3-vec"><a class="header" href="#toobjectspacevec3-vec"><strong>toObjectSpace(vec3 vec)</strong></a></h2>
+<p><strong>Returns: <code>(vec4(vec, 1.0) * inverse(modelMatrix)).xyz</code></strong>
+<br>
+<strong>Return Type: vec3</strong></p>
+<h2 id="toworldspacevec4-vec"><a class="header" href="#toworldspacevec4-vec"><strong>toWorldSpace(vec4 vec)</strong></a></h2>
+<p><strong>Returns: <code>modelMatrix * vec</code></strong>
+<br>
+<strong>Return Type: vec4</strong></p>
+<h2 id="toworldspacevec3-vec"><a class="header" href="#toworldspacevec3-vec"><strong>toWorldSpace(vec3 vec)</strong></a></h2>
+<p><strong>Returns: <code>modelMatrix * vec4(vec, 1.0)</code></strong>
+<br>
+<strong>Return Type: vec4</strong></p>
+<h2 id="fresnelfloat-bias-float-scale-float-power"><a class="header" href="#fresnelfloat-bias-float-scale-float-power"><strong>fresnel(float bias, float scale, float power)</strong></a></h2>
+<p><strong>Returns:</strong></p>
+<pre><code class="language-glsl">vec3 i = normalize(worldPosition.xyz - eye);
+return bias + scale * pow(1.0 + dot(i, normal), power);
+</code></pre>
+<p><strong>Return Type: float</strong></p>
+<h2 id="fresnel"><a class="header" href="#fresnel"><strong>fresnel()</strong></a></h2>
+<p><strong>Returns: <code>fresnel(0.25, 0.5, 1.0)</code></strong>
+<br>
+<strong>Return Type: float</strong></p>
+<h2 id="fresnelfloat-power"><a class="header" href="#fresnelfloat-power"><strong>fresnel(float power)</strong></a></h2>
+<p><strong>Returns: <code>fresnel(0.25, 0.5, power)</code></strong>
+<br>
+<strong>Return Type: float</strong></p>
+<h2 id="zerotoonefloat-a"><a class="header" href="#zerotoonefloat-a"><strong>zeroToOne(float a)</strong></a></h2>
+<p><strong>Returns: <code>a / 2 + 0.5f</code></strong>
+<br>
+<strong>Return Type: float</strong></p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../../shaders/functions/Color.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../../shaders/functions/Color.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+        <script type="text/javascript">
+            window.playground_copyable = true;
+        </script>
+        <script src="../../elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../searcher.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+    </body>
+</html>

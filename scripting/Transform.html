@@ -3,7 +3,7 @@
     <head>
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
-        <title>GameObject - Radium Documentation</title>
+        <title>Transform - Radium Documentation</title>
         <!-- Custom HTML head -->
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="description" content="">
@@ -75,7 +75,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded "><a href="../welcome.html"><strong aria-hidden="true">1.</strong> Welcome!</a></li><li class="chapter-item expanded "><a href="../install.html"><strong aria-hidden="true">2.</strong> Installing Radium</a></li><li class="chapter-item expanded "><a href="../editor/index.html"><strong aria-hidden="true">3.</strong> Editor Reference</a></li><li class="chapter-item expanded "><a href="../scripting/index.html"><strong aria-hidden="true">4.</strong> Scripting Reference</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../scripting/GameObject.html" class="active"><strong aria-hidden="true">4.1.</strong> GameObject</a></li><li class="chapter-item expanded "><a href="../scripting/Component.html"><strong aria-hidden="true">4.2.</strong> Components</a></li><li class="chapter-item expanded "><a href="../scripting/Transform.html"><strong aria-hidden="true">4.3.</strong> Transform</a></li><li class="chapter-item expanded "><div><strong aria-hidden="true">4.4.</strong> Math</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="../scripting/math/Vector2.html"><strong aria-hidden="true">4.4.1.</strong> Vector2</a></li><li class="chapter-item expanded "><a href="../scripting/math/Vector3.html"><strong aria-hidden="true">4.4.2.</strong> Vector3</a></li></ol></li></ol></li></ol>
+                <ol class="chapter"><li class="chapter-item expanded "><a href="../welcome.html"><strong aria-hidden="true">1.</strong> Welcome!</a></li><li class="chapter-item expanded "><a href="../install.html"><strong aria-hidden="true">2.</strong> Installing Radium</a></li><li class="chapter-item expanded "><a href="../editor/index.html"><strong aria-hidden="true">3.</strong> Editor Reference</a></li><li class="chapter-item expanded "><a href="../scripting/index.html"><strong aria-hidden="true">4.</strong> Scripting Reference</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../scripting/GameObject.html"><strong aria-hidden="true">4.1.</strong> GameObject</a></li><li class="chapter-item expanded "><a href="../scripting/Component.html"><strong aria-hidden="true">4.2.</strong> Components</a></li><li class="chapter-item expanded "><a href="../scripting/Transform.html" class="active"><strong aria-hidden="true">4.3.</strong> Transform</a></li><li class="chapter-item expanded "><div><strong aria-hidden="true">4.4.</strong> Math</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="../scripting/math/Vector2.html"><strong aria-hidden="true">4.4.1.</strong> Vector2</a></li><li class="chapter-item expanded "><a href="../scripting/math/Vector3.html"><strong aria-hidden="true">4.4.2.</strong> Vector3</a></li></ol></li></ol></li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
@@ -136,89 +136,21 @@
                     <main>
                         <h1 id="properties"><a class="header" href="#properties">Properties</a></h1>
 <hr>
-<p>transform (<a href="./Transform.html">Transform</a>)<br>
-components (<a href="./Component.html">Component</a>[])<br>
-name (string)<br>
-id (string)<br>
-parent (<a href="./GameObject.html">GameObject</a>)<br>
-destroyed (bool)</p>
+<p>position (<a href="./math/Vector3.html">Vector3</a>)<br>
+rotation (<a href="./math/Vector3.html">Vector3</a>)<br>
+scale (<a href="./math/Vector3.html">Vector3</a>)</p>
 <br>
 <h1 id="constructor"><a class="header" href="#constructor">Constructor</a></h1>
 <hr>
 Empty constructor
-<br>
-<br>
-<h1 id="methods"><a class="header" href="#methods">Methods</a></h1>
-<hr>
-<h2 id="create"><a class="header" href="#create"><strong>create()</strong></a></h2>
-<p>Instantiates the <a href="./GameObject.html">GameObject</a> into the scene. When creating a new <a href="./GameObject.html">GameObject</a>, it is not automatically added to the scene, this must be done manually.
-<br>
-<br>
-<strong>Returns: self</strong>
-<br>
-<strong>Return Type: <a href="./GameObject.html">GameObject</a></strong></p>
-<h2 id="destroy"><a class="header" href="#destroy"><strong>destroy()</strong></a></h2>
-<p>Removes the <a href="./GameObject.html">GameObject</a> from the scene. This will make all the functions of the <a href="./GameObject.html">GameObject</a> do nothing. The <a href="./GameObject.html">GameObject</a> will exist in code, but not be able to do anything. Everything is set to <code>None</code> in the <a href="./GameObject.html">GameObject</a>.</p>
-<h2 id="addcomponentcomponent--component"><a class="header" href="#addcomponentcomponent--component"><strong>addComponent(component : <a href="./Component.html">Component</a>)</strong></a></h2>
-<p>Adds a <a href="./Component.html">Component</a> to the <a href="./GameObject.html">GameObject</a>. This will also set the components <code>gameObject</code> property to the <a href="./GameObject.html">GameObject</a>.
-<br>
-<br>
-<strong>Returns: Created <a href="./Component.html">Component</a></strong>
-<br>
-<strong>Return Type: <a href="./Component.html">Component</a></strong></p>
-<h2 id="getcomponentcomponentname--string"><a class="header" href="#getcomponentcomponentname--string"><strong>getComponent(componentName : string)</strong></a></h2>
-<p>Finds the <a href="./Component.html">Component</a> with the name <code>componentName</code> and returns it. For names of all components, visit the <a href="./Component.html">Components</a> page. May return <code>None</code> if the <a href="./Component.html">Component</a> is not found
-<br>
-<br>
-<strong>Returns: <a href="./Component.html">Component</a> Found</strong>
-<br>
-<strong>Return Type: <a href="./Component.html">Component</a></strong></p>
-<h2 id="removecomponentcomponent--component"><a class="header" href="#removecomponentcomponent--component"><strong>removeComponent(component : <a href="./Component.html">Component</a>)</strong></a></h2>
-<p>Removes the <a href="./Component.html">Component</a> from the <a href="./GameObject.html">GameObject</a>.</p>
-<h2 id="setnamename--string"><a class="header" href="#setnamename--string"><strong>setName(name : string)</strong></a></h2>
-<p>Sets the name of the <a href="./GameObject.html">GameObject</a>.</p>
-<h2 id="setpositionposition--vector3"><a class="header" href="#setpositionposition--vector3"><strong>setPosition(position : <a href="./math/Vector2.html">Vector3</a>)</strong></a></h2>
-<p>Sets the localPosition of the <a href="./GameObject.html">GameObject</a>.</p>
-<h2 id="setrotationrotation--vector3"><a class="header" href="#setrotationrotation--vector3"><strong>setRotation(rotation : <a href="./math/Vector2.html">Vector3</a>)</strong></a></h2>
-<p>Sets the localRotation of the <a href="./GameObject.html">GameObject</a>.</p>
-<h2 id="setscalescale--vector3"><a class="header" href="#setscalescale--vector3"><strong>setScale(scale : <a href="./math/Vector2.html">Vector3</a>)</strong></a></h2>
-<p>Sets the localScale of the <a href="./GameObject.html">GameObject</a>.</p>
-<h2 id="translatetranslation--vector3"><a class="header" href="#translatetranslation--vector3"><strong>translate(translation : <a href="./math/Vector2.html">Vector3</a>)</strong></a></h2>
-<p>Translates the <a href="./GameObject.html">GameObject</a> position by the given translation.</p>
-<h2 id="rotaterotation--vector3"><a class="header" href="#rotaterotation--vector3"><strong>rotate(rotation : <a href="./math/Vector2.html">Vector3</a>)</strong></a></h2>
-<p>Rotates the <a href="./GameObject.html">GameObject</a> rotation by the given rotation.</p>
-<h2 id="scalescale--vector3"><a class="header" href="#scalescale--vector3"><strong>scale(scale : <a href="./math/Vector2.html">Vector3</a>)</strong></a></h2>
-<p>Scales the <a href="./GameObject.html">GameObject</a> scale by the given scale.</p>
-<h2 id="updateattributes"><a class="header" href="#updateattributes"><strong>updateAttributes()</strong></a></h2>
-<p>Updates all the <a href="./GameObject.html">GameObject</a> attributes. This is called in every setter function.</p>
-<h2 id="setparentparent--gameobject"><a class="header" href="#setparentparent--gameobject"><strong>setParent(parent : <a href="./GameObject.html">GameObject</a>)</strong></a></h2>
-<p>Sets the <a href="./GameObject.html">GameObject</a> parent to the given parent.</p>
-<h2 id="exists"><a class="header" href="#exists"><strong>exists()</strong></a></h2>
-<p>Returns <code>True</code> if the <a href="./GameObject.html">GameObject</a> is instantiated in the scene.
-<br>
-<br>
-<strong>Returns: If <a href="./GameObject.html">GameObject</a> exists</strong>
-<br>
-<strong>Return Type: bool</strong></p>
-<br>
-<h1 id="class-methods"><a class="header" href="#class-methods">Class Methods</a></h1>
-<hr>
-<h2 id="findname--string"><a class="header" href="#findname--string"><strong>find(name : string)</strong></a></h2>
-<p>Finds the <a href="./GameObject.html">GameObject</a> with the name <code>name</code> and returns it. May return <code>None</code> if the <a href="./GameObject.html">GameObject</a> is not found.
-<br>
-<br>
-<strong>Returns: <a href="./GameObject.html">GameObject</a> Found</strong>
-<br>
-<strong>Return Type: <a href="./GameObject.html">GameObject</a></strong></p>
-
                     </main>
 
                     <nav class="nav-wrapper" aria-label="Page navigation">
                         <!-- Mobile navigation buttons -->
-                            <a rel="prev" href="../scripting/index.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                            <a rel="prev" href="../scripting/Component.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                                 <i class="fa fa-angle-left"></i>
                             </a>
-                            <a rel="next" href="../scripting/Component.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                            <a rel="next" href="../scripting/math/Vector2.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                                 <i class="fa fa-angle-right"></i>
                             </a>
                         <div style="clear: both"></div>
@@ -227,10 +159,10 @@ Empty constructor
             </div>
 
             <nav class="nav-wide-wrapper" aria-label="Page navigation">
-                    <a rel="prev" href="../scripting/index.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                    <a rel="prev" href="../scripting/Component.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                         <i class="fa fa-angle-left"></i>
                     </a>
-                    <a rel="next" href="../scripting/Component.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                    <a rel="next" href="../scripting/math/Vector2.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                         <i class="fa fa-angle-right"></i>
                     </a>
             </nav>

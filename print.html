@@ -76,7 +76,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded "><a href="welcome.html"><strong aria-hidden="true">1.</strong> Welcome!</a></li><li class="chapter-item expanded "><a href="install.html"><strong aria-hidden="true">2.</strong> Installing Radium</a></li><li class="chapter-item expanded "><a href="editor/index.html"><strong aria-hidden="true">3.</strong> Editor Reference</a></li><li class="chapter-item expanded "><a href="scripting/index.html"><strong aria-hidden="true">4.</strong> Scripting Reference</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="scripting/GameObject.html"><strong aria-hidden="true">4.1.</strong> GameObject</a></li><li class="chapter-item expanded "><a href="scripting/Component.html"><strong aria-hidden="true">4.2.</strong> Components</a></li><li class="chapter-item expanded "><a href="scripting/Transform.html"><strong aria-hidden="true">4.3.</strong> Transform</a></li><li class="chapter-item expanded "><div><strong aria-hidden="true">4.4.</strong> Math</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="scripting/math/Vector2.html"><strong aria-hidden="true">4.4.1.</strong> Vector2</a></li><li class="chapter-item expanded "><a href="scripting/math/Vector3.html"><strong aria-hidden="true">4.4.2.</strong> Vector3</a></li></ol></li></ol></li></ol>
+                <ol class="chapter"><li class="chapter-item expanded "><a href="welcome.html"><strong aria-hidden="true">1.</strong> Welcome!</a></li><li class="chapter-item expanded "><a href="install.html"><strong aria-hidden="true">2.</strong> Installing Radium</a></li><li class="chapter-item expanded "><a href="editor/index.html"><strong aria-hidden="true">3.</strong> Editor Reference</a></li><li class="chapter-item expanded "><a href="scripting/index.html"><strong aria-hidden="true">4.</strong> Scripting Reference</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="scripting/GameObject.html"><strong aria-hidden="true">4.1.</strong> GameObject</a></li><li class="chapter-item expanded "><a href="scripting/Component.html"><strong aria-hidden="true">4.2.</strong> Components</a></li><li class="chapter-item expanded "><a href="scripting/Transform.html"><strong aria-hidden="true">4.3.</strong> Transform</a></li><li class="chapter-item expanded "><a href="scripting/math.html"><strong aria-hidden="true">4.4.</strong> Math</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="scripting/math/Vector2.html"><strong aria-hidden="true">4.4.1.</strong> Vector2</a></li><li class="chapter-item expanded "><a href="scripting/math/Vector3.html"><strong aria-hidden="true">4.4.2.</strong> Vector3</a></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">4.5.</strong> Graphics</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="scripting/graphics/Color.html"><strong aria-hidden="true">4.5.1.</strong> Color</a></li><li class="chapter-item expanded "><a href="scripting/graphics/Material.html"><strong aria-hidden="true">4.5.2.</strong> Material</a></li><li class="chapter-item expanded "><a href="scripting/graphics/Mesh.html"><strong aria-hidden="true">4.5.3.</strong> Mesh</a></li></ol></li></ol></li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
@@ -277,7 +277,9 @@ scale (<a href="scripting/./math/Vector3.html">Vector3</a>)</p>
 <br>
 <h1 id="constructor-2"><a class="header" href="#constructor-2">Constructor</a></h1>
 <hr>
-Empty constructor<div style="break-before: page; page-break-before: always;"></div><h1 id="properties-3"><a class="header" href="#properties-3">Properties</a></h1>
+Empty constructor<div style="break-before: page; page-break-before: always;"></div><h1 id="math"><a class="header" href="#math">Math</a></h1>
+<p>These are classes that are related to math in some way.</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="properties-3"><a class="header" href="#properties-3">Properties</a></h1>
 <hr>
 <p>x (float)<br>
 y (float)</p>
@@ -424,6 +426,94 @@ vector`</p>
 <strong>Returns: <code>Vector3(1, 1, 1)</code></strong>
 <br>
 <strong>Return Type: <a href="scripting/math/./Vector3.html">Vector3</a></strong></p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="properties-5"><a class="header" href="#properties-5">Properties</a></h1>
+<hr>
+<p>r (float)
+g (float)
+b (float)
+a (float)</p>
+<br>
+<h1 id="constructor-5"><a class="header" href="#constructor-5">Constructor</a></h1>
+<hr>
+<a href="scripting/graphics/./Color.html">Color</a>(r : float, g : float, b : float, a = 1.0 : float)
+<br>
+a is an optional field and will be set to 1.0 by default.
+<br>
+<br>
+<h1 id="methods-4"><a class="header" href="#methods-4">Methods</a></h1>
+<hr>
+<h2 id="lerpother--color-t--float"><a class="header" href="#lerpother--color-t--float"><strong>lerp(other : <a href="scripting/graphics/./Color.html">Color</a>, t : float)</strong></a></h2>
+<p>Interpolates between two colors by t. t is clamped between 0 and 1.
+<br>
+<br>
+<strong>Returns: Interpolated <a href="scripting/graphics/./Color.html">Color</a></strong>
+<br>
+<strong>Return Type: <a href="scripting/graphics/./Color.html">Color</a></strong></p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="properties-6"><a class="header" href="#properties-6">Properties</a></h1>
+<hr>
+<p>mainTex (string)<br>
+normalTex (string)<br>
+specularTex (string)<br>
+specularLighting (bool)<br>
+useNormalMap (bool)<br>
+useSpecularMap (bool)<br>
+reflectivity (float)<br>
+shineDamper (float)<br>
+color (<a href="scripting/graphics/./Color.html">Color</a>)</p>
+<br>
+<h1 id="constructor-6"><a class="header" href="#constructor-6">Constructor</a></h1>
+<hr>
+Empty constructor
+<br>
+<br>
+<h1 id="methods-5"><a class="header" href="#methods-5">Methods</a></h1>
+<hr>
+<h2 id="setmaintexmaintex--string"><a class="header" href="#setmaintexmaintex--string"><strong>setMainTex(mainTex : string)</strong></a></h2>
+<p>Sets the main texture of the material.</p>
+<h2 id="setnormaltexnormaltex--string"><a class="header" href="#setnormaltexnormaltex--string"><strong>setNormalTex(normalTex : string)</strong></a></h2>
+<p>Sets the normal map of the material.</p>
+<h2 id="setspeculartexspeculartex--string"><a class="header" href="#setspeculartexspeculartex--string"><strong>setSpecularTex(specularTex : string)</strong></a></h2>
+<p>Sets the specular map of the material.</p>
+<h2 id="setspecularlightingspecularlighting--bool"><a class="header" href="#setspecularlightingspecularlighting--bool"><strong>setSpecularLighting(specularLighting : bool)</strong></a></h2>
+<p>Sets whether or not the material should use specular lighting.</p>
+<h2 id="setusenormalmapusenormalmap--bool"><a class="header" href="#setusenormalmapusenormalmap--bool"><strong>setUseNormalMap(useNormalMap : bool)</strong></a></h2>
+<p>Sets whether or not the material should use a normal map.</p>
+<h2 id="setusespecularmapusespecularmap--bool"><a class="header" href="#setusespecularmapusespecularmap--bool"><strong>setUseSpecularMap(useSpecularMap : bool)</strong></a></h2>
+<p>Sets whether or not the material should use a specular map.</p>
+<h2 id="setreflectivityreflectivity--float"><a class="header" href="#setreflectivityreflectivity--float"><strong>setReflectivity(reflectivity : float)</strong></a></h2>
+<p>Sets the reflectivity of the material.</p>
+<h2 id="setshinedampershinedamper--float"><a class="header" href="#setshinedampershinedamper--float"><strong>setShineDamper(shineDamper : float)</strong></a></h2>
+<p>Sets the shine damper of the material.</p>
+<h2 id="setcolorcolor--color"><a class="header" href="#setcolorcolor--color"><strong>setColor(color : <a href="scripting/graphics/./Color.html">Color</a>)</strong></a></h2>
+<p>Sets the color of the material.</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="properties-7"><a class="header" href="#properties-7">Properties</a></h1>
+<hr>
+<p>vertices (<a href="scripting/graphics/../math/Vector3.html">Vector3</a>[])<br>
+uvs (<a href="scripting/graphics/../math/Vector2.html">Vector2</a>[])<br>
+normals (<a href="scripting/graphics/../math/Vector3.html">Vector3</a>[])<br>
+tangents (<a href="scripting/graphics/../math/Vector3.html">Vector3</a>[])<br>
+bitangents (<a href="scripting/graphics/../math/Vector3.html">Vector3</a>[])<br>
+indices (int[])</p>
+<br>
+<h1 id="constructor-7"><a class="header" href="#constructor-7">Constructor</a></h1>
+<hr>
+Empty constructor
+<br>
+<br>
+<h1 id="methods-6"><a class="header" href="#methods-6">Methods</a></h1>
+<hr>
+<h2 id="addvertexvertex--vector3"><a class="header" href="#addvertexvertex--vector3"><strong>addVertex(vertex : <a href="scripting/graphics/../math/Vector3.html">Vector3</a>)</strong></a></h2>
+<p>Adds a vertex to the mesh.</p>
+<h2 id="adduvuv--vector2"><a class="header" href="#adduvuv--vector2"><strong>addUV(uv : <a href="scripting/graphics/../math/Vector2.html">Vector2</a>)</strong></a></h2>
+<p>Adds a UV to the mesh.</p>
+<h2 id="addnormalnormal--vector3"><a class="header" href="#addnormalnormal--vector3"><strong>addNormal(normal : <a href="scripting/graphics/../math/Vector3.html">Vector3</a>)</strong></a></h2>
+<p>Adds a normal to the mesh.</p>
+<h2 id="addtangenttangent--vector3"><a class="header" href="#addtangenttangent--vector3"><strong>addTangent(tangent : <a href="scripting/graphics/../math/Vector3.html">Vector3</a>)</strong></a></h2>
+<p>Adds a tangent to the mesh.</p>
+<h2 id="addbitangentbitangent--vector3"><a class="header" href="#addbitangentbitangent--vector3"><strong>addBitangent(bitangent : <a href="scripting/graphics/../math/Vector3.html">Vector3</a>)</strong></a></h2>
+<p>Adds a bitangent to the mesh.</p>
+<h2 id="addindexindex--int"><a class="header" href="#addindexindex--int"><strong>addIndex(index : int)</strong></a></h2>
+<p>Adds an index to the mesh.</p>
 
                     </main>
 

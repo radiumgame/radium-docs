@@ -76,7 +76,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded "><a href="welcome.html"><strong aria-hidden="true">1.</strong> Welcome!</a></li><li class="chapter-item expanded "><a href="install.html"><strong aria-hidden="true">2.</strong> Installing Radium</a></li><li class="chapter-item expanded "><a href="editor/index.html"><strong aria-hidden="true">3.</strong> Editor Reference</a></li><li class="chapter-item expanded "><a href="scripting/index.html"><strong aria-hidden="true">4.</strong> Scripting Reference</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="scripting/Transform.html"><strong aria-hidden="true">4.1.</strong> Transform</a></li><li class="chapter-item expanded "><a href="scripting/GameObject.html"><strong aria-hidden="true">4.2.</strong> GameObject</a></li><li class="chapter-item expanded "><a href="scripting/Component.html"><strong aria-hidden="true">4.3.</strong> Components</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="scripting/components/MeshFilter.html"><strong aria-hidden="true">4.3.1.</strong> MeshFilter</a></li><li class="chapter-item expanded "><a href="scripting/components/MeshRenderer.html"><strong aria-hidden="true">4.3.2.</strong> Mesh Renderer</a></li></ol></li><li class="chapter-item expanded "><a href="scripting/math.html"><strong aria-hidden="true">4.4.</strong> Math</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="scripting/math/Vector2.html"><strong aria-hidden="true">4.4.1.</strong> Vector2</a></li><li class="chapter-item expanded "><a href="scripting/math/Vector3.html"><strong aria-hidden="true">4.4.2.</strong> Vector3</a></li></ol></li><li class="chapter-item expanded "><a href="scripting/graphics.html"><strong aria-hidden="true">4.5.</strong> Graphics</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="scripting/graphics/Color.html"><strong aria-hidden="true">4.5.1.</strong> Color</a></li><li class="chapter-item expanded "><a href="scripting/graphics/Material.html"><strong aria-hidden="true">4.5.2.</strong> Material</a></li><li class="chapter-item expanded "><a href="scripting/graphics/Mesh.html"><strong aria-hidden="true">4.5.3.</strong> Mesh</a></li></ol></li></ol></li></ol>
+                <ol class="chapter"><li class="chapter-item expanded "><a href="welcome.html"><strong aria-hidden="true">1.</strong> Welcome!</a></li><li class="chapter-item expanded "><a href="install.html"><strong aria-hidden="true">2.</strong> Installing Radium</a></li><li class="chapter-item expanded "><a href="editor/index.html"><strong aria-hidden="true">3.</strong> Editor Reference</a></li><li class="chapter-item expanded "><a href="scripting/index.html"><strong aria-hidden="true">4.</strong> Scripting Reference</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="scripting/Transform.html"><strong aria-hidden="true">4.1.</strong> Transform</a></li><li class="chapter-item expanded "><a href="scripting/GameObject.html"><strong aria-hidden="true">4.2.</strong> GameObject</a></li><li class="chapter-item expanded "><a href="scripting/Component.html"><strong aria-hidden="true">4.3.</strong> Components</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="scripting/components/MeshFilter.html"><strong aria-hidden="true">4.3.1.</strong> MeshFilter</a></li><li class="chapter-item expanded "><a href="scripting/components/MeshRenderer.html"><strong aria-hidden="true">4.3.2.</strong> Mesh Renderer</a></li><li class="chapter-item expanded "><a href="scripting/components/Camera.html"><strong aria-hidden="true">4.3.3.</strong> Camera</a></li><li class="chapter-item expanded "><a href="scripting/components/Light.html"><strong aria-hidden="true">4.3.4.</strong> Light</a></li><li class="chapter-item expanded "><a href="scripting/components/Rigidbody.html"><strong aria-hidden="true">4.3.5.</strong> Rigidbody</a></li><li class="chapter-item expanded "><a href="scripting/components/Image.html"><strong aria-hidden="true">4.3.6.</strong> Image</a></li><li class="chapter-item expanded "><a href="scripting/components/Panel.html"><strong aria-hidden="true">4.3.7.</strong> Panel</a></li><li class="chapter-item expanded "><a href="scripting/components/Text.html"><strong aria-hidden="true">4.3.8.</strong> Text</a></li></ol></li><li class="chapter-item expanded "><a href="scripting/math.html"><strong aria-hidden="true">4.4.</strong> Math</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="scripting/math/Vector2.html"><strong aria-hidden="true">4.4.1.</strong> Vector2</a></li><li class="chapter-item expanded "><a href="scripting/math/Vector3.html"><strong aria-hidden="true">4.4.2.</strong> Vector3</a></li></ol></li><li class="chapter-item expanded "><a href="scripting/graphics.html"><strong aria-hidden="true">4.5.</strong> Graphics</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="scripting/graphics/Color.html"><strong aria-hidden="true">4.5.1.</strong> Color</a></li><li class="chapter-item expanded "><a href="scripting/graphics/Material.html"><strong aria-hidden="true">4.5.2.</strong> Material</a></li><li class="chapter-item expanded "><a href="scripting/graphics/Mesh.html"><strong aria-hidden="true">4.5.3.</strong> Mesh</a></li></ol></li></ol></li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
@@ -328,14 +328,165 @@ Empty constructor
 <li>Unlit</li>
 <li>Lit</li>
 </ul>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="properties-5"><a class="header" href="#properties-5">Properties</a></h1>
+<hr>
+<p>nearPlane (float)<br>
+farPlane (float)<br>
+fov (float)</p>
+<br>
+<h1 id="constructor-5"><a class="header" href="#constructor-5">Constructor</a></h1>
+<hr>
+Empty constructor
+<br>
+<br>
+<h1 id="methods-4"><a class="header" href="#methods-4">Methods</a></h1>
+<hr>
+<h2 id="setnearplanenearplane--float"><a class="header" href="#setnearplanenearplane--float"><strong>setNearPlane(nearPlane : float)</strong></a></h2>
+<p>Sets the near plane of the camera.</p>
+<h2 id="setfarplanefarplane--float"><a class="header" href="#setfarplanefarplane--float"><strong>setFarPlane(farPlane : float)</strong></a></h2>
+<p>Sets the far plane of the camera.</p>
+<h2 id="setfovfov--float"><a class="header" href="#setfovfov--float"><strong>setFov(fov : float)</strong></a></h2>
+<p>Sets the field of view of the camera.</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="properties-6"><a class="header" href="#properties-6">Properties</a></h1>
+<hr>
+<p>intensity (float)<br>
+attenuation (float)<br>
+color (<a href="scripting/components/../graphics/Color.html">Color</a>)<br>
+lightType (string)</p>
+<br>
+<h1 id="constructor-6"><a class="header" href="#constructor-6">Constructor</a></h1>
+<hr>
+Empty constructor
+<br>
+<br>
+<h1 id="methods-5"><a class="header" href="#methods-5">Methods</a></h1>
+<hr>
+<h2 id="setintensityintensity--float"><a class="header" href="#setintensityintensity--float"><strong>setIntensity(intensity : float)</strong></a></h2>
+<p>Sets the intensity of the light.</p>
+<h2 id="setattenuationattenuation--float"><a class="header" href="#setattenuationattenuation--float"><strong>setAttenuation(attenuation : float)</strong></a></h2>
+<p>Sets the attenuation(range) of the light.</p>
+<h2 id="setcolorcolor--color"><a class="header" href="#setcolorcolor--color"><strong>setColor(color : <a href="scripting/components/../graphics/Color.html">Color</a>)</strong></a></h2>
+<p>Sets the color of the light.</p>
+<h2 id="setlighttypelighttype--string"><a class="header" href="#setlighttypelighttype--string"><strong>setLightType(lightType : string)</strong></a></h2>
+<p>Sets the type of the light. Valid types include:<br></p>
+<ul>
+<li>Directional</li>
+<li>Point</li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="properties-7"><a class="header" href="#properties-7">Properties</a></h1>
+<hr>
+<p>mass (float)<br>
+drag (float)<br>
+angularDrag (float)<br>
+applyGravity (bool)<br>
+isKinematic (bool)<br>
+isStatic (bool)<br>
+colliderRadius (float)<br>
+colliderSize (<a href="scripting/components/../math/Vector3.html">Vector3</a>)</p>
+<br>
+<h1 id="constructor-7"><a class="header" href="#constructor-7">Constructor</a></h1>
+<hr>
+Empty constructor
+<br>
+<br>
+<h1 id="methods-6"><a class="header" href="#methods-6">Methods</a></h1>
+<hr>
+<h2 id="setmassmass--float"><a class="header" href="#setmassmass--float"><strong>setMass(mass : float)</strong></a></h2>
+<p>Sets the mass of the rigidbody.</p>
+<h2 id="setdragdrag--float"><a class="header" href="#setdragdrag--float"><strong>setDrag(drag : float)</strong></a></h2>
+<p>Sets the drag of the rigidbody.</p>
+<h2 id="setangulardragangulardrag--float"><a class="header" href="#setangulardragangulardrag--float"><strong>setAngularDrag(angularDrag : float)</strong></a></h2>
+<p>Sets the angular drag of the rigidbody.</p>
+<h2 id="setapplygravityapplygravity--bool"><a class="header" href="#setapplygravityapplygravity--bool"><strong>setApplyGravity(applyGravity : bool)</strong></a></h2>
+<p>Sets whether the rigidbody applies gravity.</p>
+<h2 id="setkinematiciskinematic--bool"><a class="header" href="#setkinematiciskinematic--bool"><strong>setKinematic(isKinematic : bool)</strong></a></h2>
+<p>Sets whether the rigidbody is kinematic.</p>
+<h2 id="setstaticisstatic--bool"><a class="header" href="#setstaticisstatic--bool"><strong>setStatic(isStatic : bool)</strong></a></h2>
+<p>Sets whether the rigidbody is static.</p>
+<h2 id="setcolliderradiuscolliderradius--float"><a class="header" href="#setcolliderradiuscolliderradius--float"><strong>setColliderRadius(colliderRadius : float)</strong></a></h2>
+<p>Sets the radius of the collider.</p>
+<h2 id="setcollidersizecollidersize--vector3"><a class="header" href="#setcollidersizecollidersize--vector3"><strong>setColliderSize(colliderSize : <a href="scripting/components/../math/Vector3.html">Vector3</a>)</strong></a></h2>
+<p>Sets the size of the collider.</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="properties-8"><a class="header" href="#properties-8">Properties</a></h1>
+<hr>
+<p>position (<a href="scripting/components/../math/Vector2.html">Vector2</a>)<br>
+size (<a href="scripting/components/../math/Vector2.html">Vector2</a>)<br>
+color (<a href="scripting/components/../graphics/Color.html">Color</a>)<br>
+texture (string)<br>
+layer (int)</p>
+<br>
+<h1 id="constructor-8"><a class="header" href="#constructor-8">Constructor</a></h1>
+<hr>
+Empty constructor
+<br>
+<br>
+<h1 id="methods-7"><a class="header" href="#methods-7">Methods</a></h1>
+<hr>
+<h2 id="setpositionposition--vector2"><a class="header" href="#setpositionposition--vector2"><strong>setPosition(position : <a href="scripting/components/../math/Vector2.html">Vector2</a>)</strong></a></h2>
+<p>Sets the position of the sprite. The framebuffer is 1920 x 1080 pixels. The position is relative to the top left corner of the framebuffer.</p>
+<h2 id="setsizesize--vector2"><a class="header" href="#setsizesize--vector2"><strong>setSize(size : <a href="scripting/components/../math/Vector2.html">Vector2</a>)</strong></a></h2>
+<p>Sets the size of the sprite. The framebuffer is 1920 x 1080 pixels. The size is relative to this aspect ratio.</p>
+<h2 id="setcolorcolor--color-1"><a class="header" href="#setcolorcolor--color-1"><strong>setColor(color : Color)</strong></a></h2>
+<p>Sets the color of the sprite.</p>
+<h2 id="settexturetexture--string"><a class="header" href="#settexturetexture--string"><strong>setTexture(texture : string)</strong></a></h2>
+<p>Sets the texture of the sprite. The path begins in the Assets/ folder.</p>
+<h2 id="setlayerlayer--int"><a class="header" href="#setlayerlayer--int"><strong>setLayer(layer : int)</strong></a></h2>
+<p>Sets the layer of the sprite. The layer is used to determine the order of the sprite in the UI.</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="properties-9"><a class="header" href="#properties-9">Properties</a></h1>
+<hr>
+<p>None</p>
+<br>
+<h1 id="constructor-9"><a class="header" href="#constructor-9">Constructor</a></h1>
+<hr>
+Empty constructor
+<br>
+<br>
+<h1 id="methods-8"><a class="header" href="#methods-8">Methods</a></h1>
+<hr>
+None<div style="break-before: page; page-break-before: always;"></div><h1 id="properties-10"><a class="header" href="#properties-10">Properties</a></h1>
+<hr>
+<p>position (<a href="scripting/components/../math/Vector2.html">Vector2</a>)<br>
+fontSize (int)<br>
+textAlign (string)<br>
+text (string)<br>
+fontBlur (float)<br>
+color (<a href="scripting/components/../graphics/Color.html">Color</a>)<br>
+layer (int)</p>
+<br>
+<h1 id="constructor-10"><a class="header" href="#constructor-10">Constructor</a></h1>
+<hr>
+Empty constructor
+<br>
+<br>
+<h1 id="methods-9"><a class="header" href="#methods-9">Methods</a></h1>
+<hr>
+<h2 id="setpositionposition--vector2-1"><a class="header" href="#setpositionposition--vector2-1"><strong>setPosition(position : <a href="scripting/components/../math/Vector2.html">Vector2</a>)</strong></a></h2>
+<p>Sets the position of the text. The framebuffer is 1920 x 1080 pixels. The position is relative to the top left corner of the framebuffer.</p>
+<h2 id="setfontsizefontsize--int"><a class="header" href="#setfontsizefontsize--int"><strong>setFontSize(fontSize : int)</strong></a></h2>
+<p>Sets the font size of the text.</p>
+<h2 id="settextaligntextalign--string"><a class="header" href="#settextaligntextalign--string"><strong>setTextAlign(textAlign : string)</strong></a></h2>
+<p>Sets the text alignment of the text. Valid alignments include:<br></p>
+<ul>
+<li>Left</li>
+<li>Middle</li>
+<li>Right</li>
+</ul>
+<h2 id="settexttext--string"><a class="header" href="#settexttext--string"><strong>setText(text : string)</strong></a></h2>
+<p>Sets the content of the text.</p>
+<h2 id="setfontblurfontblur--float"><a class="header" href="#setfontblurfontblur--float"><strong>setFontBlur(fontBlur : float)</strong></a></h2>
+<p>Sets the blur of the text.</p>
+<h2 id="setcolorcolor--color-2"><a class="header" href="#setcolorcolor--color-2"><strong>setColor(color : <a href="scripting/components/../graphics/Color.html">Color</a>)</strong></a></h2>
+<p>Sets the color of the text.</p>
+<h2 id="setlayerlayer--int-1"><a class="header" href="#setlayerlayer--int-1"><strong>setLayer(layer : int)</strong></a></h2>
+<p>Sets the layer of the text. The layer is used to determine the order of the text in the UI.</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="math"><a class="header" href="#math">Math</a></h1>
 <p>These are classes that are related to math.</p>
-<div style="break-before: page; page-break-before: always;"></div><h1 id="properties-5"><a class="header" href="#properties-5">Properties</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="properties-11"><a class="header" href="#properties-11">Properties</a></h1>
 <hr>
 <p>x (float)<br>
 y (float)</p>
 <br>
-<h1 id="constructor-5"><a class="header" href="#constructor-5">Constructor</a></h1>
+<h1 id="constructor-11"><a class="header" href="#constructor-11">Constructor</a></h1>
 <hr>
 <a href="scripting/math/./Vector2.html">Vector2</a>(x : float, y : float)
 <br>
@@ -343,7 +494,7 @@ y (float)</p>
 <hr>
 <p>+, -, *, /, +=, -=, *=, /=, ==, !=</p>
 <br>
-<h1 id="methods-4"><a class="header" href="#methods-4">Methods</a></h1>
+<h1 id="methods-10"><a class="header" href="#methods-10">Methods</a></h1>
 <hr>
 <h2 id="array"><a class="header" href="#array"><strong>array()</strong></a></h2>
 <p>Returns the vector as an array.
@@ -403,13 +554,13 @@ vector`</p>
 <strong>Returns: <code>Vector2(1, 1, 1)</code></strong>
 <br>
 <strong>Return Type: <a href="scripting/math/./Vector2.html">Vector2</a></strong></p>
-<div style="break-before: page; page-break-before: always;"></div><h1 id="properties-6"><a class="header" href="#properties-6">Properties</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="properties-12"><a class="header" href="#properties-12">Properties</a></h1>
 <hr>
 <p>x (float)<br>
 y (float)<br>
 z (float)</p>
 <br>
-<h1 id="constructor-6"><a class="header" href="#constructor-6">Constructor</a></h1>
+<h1 id="constructor-12"><a class="header" href="#constructor-12">Constructor</a></h1>
 <hr>
 <a href="scripting/math/./Vector3.html">Vector3</a>(x : float, y : float, z : float)
 <br>
@@ -417,7 +568,7 @@ z (float)</p>
 <hr>
 <p>+, -, *, /, +=, -=, *=, /=, ==, !=</p>
 <br>
-<h1 id="methods-5"><a class="header" href="#methods-5">Methods</a></h1>
+<h1 id="methods-11"><a class="header" href="#methods-11">Methods</a></h1>
 <hr>
 <h2 id="array-1"><a class="header" href="#array-1"><strong>array()</strong></a></h2>
 <p>Returns the vector as an array.
@@ -479,21 +630,21 @@ vector`</p>
 <strong>Return Type: <a href="scripting/math/./Vector3.html">Vector3</a></strong></p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="graphics"><a class="header" href="#graphics">Graphics</a></h1>
 <p>Any classes related to graphics (not components).</p>
-<div style="break-before: page; page-break-before: always;"></div><h1 id="properties-7"><a class="header" href="#properties-7">Properties</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="properties-13"><a class="header" href="#properties-13">Properties</a></h1>
 <hr>
 <p>r (float)
 g (float)
 b (float)
 a (float)</p>
 <br>
-<h1 id="constructor-7"><a class="header" href="#constructor-7">Constructor</a></h1>
+<h1 id="constructor-13"><a class="header" href="#constructor-13">Constructor</a></h1>
 <hr>
 <a href="scripting/graphics/./Color.html">Color</a>(r : float, g : float, b : float, a = 1.0 : float)
 <br>
 a is an optional field and will be set to 1.0 by default.
 <br>
 <br>
-<h1 id="methods-6"><a class="header" href="#methods-6">Methods</a></h1>
+<h1 id="methods-12"><a class="header" href="#methods-12">Methods</a></h1>
 <hr>
 <h2 id="lerpother--color-t--float"><a class="header" href="#lerpother--color-t--float"><strong>lerp(other : <a href="scripting/graphics/./Color.html">Color</a>, t : float)</strong></a></h2>
 <p>Interpolates between two colors by t. t is clamped between 0 and 1.
@@ -502,7 +653,7 @@ a is an optional field and will be set to 1.0 by default.
 <strong>Returns: Interpolated <a href="scripting/graphics/./Color.html">Color</a></strong>
 <br>
 <strong>Return Type: <a href="scripting/graphics/./Color.html">Color</a></strong></p>
-<div style="break-before: page; page-break-before: always;"></div><h1 id="properties-8"><a class="header" href="#properties-8">Properties</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="properties-14"><a class="header" href="#properties-14">Properties</a></h1>
 <hr>
 <p>mainTex (string)<br>
 normalTex (string)<br>
@@ -514,12 +665,12 @@ reflectivity (float)<br>
 shineDamper (float)<br>
 color (<a href="scripting/graphics/./Color.html">Color</a>)</p>
 <br>
-<h1 id="constructor-8"><a class="header" href="#constructor-8">Constructor</a></h1>
+<h1 id="constructor-14"><a class="header" href="#constructor-14">Constructor</a></h1>
 <hr>
 Empty constructor
 <br>
 <br>
-<h1 id="methods-7"><a class="header" href="#methods-7">Methods</a></h1>
+<h1 id="methods-13"><a class="header" href="#methods-13">Methods</a></h1>
 <hr>
 <h2 id="setmaintexmaintex--string"><a class="header" href="#setmaintexmaintex--string"><strong>setMainTex(mainTex : string)</strong></a></h2>
 <p>Sets the main texture of the material.</p>
@@ -537,9 +688,9 @@ Empty constructor
 <p>Sets the reflectivity of the material.</p>
 <h2 id="setshinedampershinedamper--float"><a class="header" href="#setshinedampershinedamper--float"><strong>setShineDamper(shineDamper : float)</strong></a></h2>
 <p>Sets the shine damper of the material.</p>
-<h2 id="setcolorcolor--color"><a class="header" href="#setcolorcolor--color"><strong>setColor(color : <a href="scripting/graphics/./Color.html">Color</a>)</strong></a></h2>
+<h2 id="setcolorcolor--color-3"><a class="header" href="#setcolorcolor--color-3"><strong>setColor(color : <a href="scripting/graphics/./Color.html">Color</a>)</strong></a></h2>
 <p>Sets the color of the material.</p>
-<div style="break-before: page; page-break-before: always;"></div><h1 id="properties-9"><a class="header" href="#properties-9">Properties</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="properties-15"><a class="header" href="#properties-15">Properties</a></h1>
 <hr>
 <p>vertices (<a href="scripting/graphics/../math/Vector3.html">Vector3</a>[])<br>
 uvs (<a href="scripting/graphics/../math/Vector2.html">Vector2</a>[])<br>
@@ -548,12 +699,12 @@ tangents (<a href="scripting/graphics/../math/Vector3.html">Vector3</a>[])<br>
 bitangents (<a href="scripting/graphics/../math/Vector3.html">Vector3</a>[])<br>
 indices (int[])</p>
 <br>
-<h1 id="constructor-9"><a class="header" href="#constructor-9">Constructor</a></h1>
+<h1 id="constructor-15"><a class="header" href="#constructor-15">Constructor</a></h1>
 <hr>
 Empty constructor
 <br>
 <br>
-<h1 id="methods-8"><a class="header" href="#methods-8">Methods</a></h1>
+<h1 id="methods-14"><a class="header" href="#methods-14">Methods</a></h1>
 <hr>
 <h2 id="addvertexvertex--vector3"><a class="header" href="#addvertexvertex--vector3"><strong>addVertex(vertex : <a href="scripting/graphics/../math/Vector3.html">Vector3</a>)</strong></a></h2>
 <p>Adds a vertex to the mesh.</p>

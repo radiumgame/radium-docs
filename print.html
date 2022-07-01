@@ -1213,35 +1213,35 @@ return vec2(xResult, yResult);
 <strong>Returns: Specular Multiplier</strong>
 <br>
 <strong>Return Type: vec3</strong></p>
-<h2 id="calculatelightlight-light-vec3-n-vec3-spec-material-material"><a class="header" href="#calculatelightlight-light-vec3-n-vec3-spec-material-material"><strong>calculateLight(Light light, vec3 n, vec3 spec, Material material)</strong></a></h2>
+<h2 id="calculatelightlight-light-vec3-n-vec3-spec-material-material"><a class="header" href="#calculatelightlight-light-vec3-n-vec3-spec-material-material"><strong>calculateLight(<a href="shaders/functions/../data-types/Light.html">Light</a> light, vec3 n, vec3 spec, Material material)</strong></a></h2>
 <p>Calculates basic lighting for a single light. This is used for diffuse and specular lighting.
 <br>
 <br>
 <strong>Returns: Lighting</strong>
 <br>
 <strong>Return Type: vec4</strong></p>
-<h2 id="calculatelightlight-light-vec3-n-vec3-spec"><a class="header" href="#calculatelightlight-light-vec3-n-vec3-spec"><strong>calculateLight(Light light, vec3 n, vec3 spec)</strong></a></h2>
+<h2 id="calculatelightlight-light-vec3-n-vec3-spec"><a class="header" href="#calculatelightlight-light-vec3-n-vec3-spec"><strong>calculateLight(<a href="shaders/functions/../data-types/Light.html">Light</a> light, vec3 n, vec3 spec)</strong></a></h2>
 <p>Same as <a href="shaders/functions/./lighting.html#calculatelightlight-light-vec3-n-vec3-spec-material">calculateLight</a> but uses a default material. The default material is: <code>Material(10.0f, 1.0f)</code>
 <br>
 <br>
 <strong>Returns: Lighting</strong>
 <br>
 <strong>Return Type: vec4</strong></p>
-<h2 id="calculatelightlight-light-material-mat"><a class="header" href="#calculatelightlight-light-material-mat"><strong>calculateLight(Light light, Material mat)</strong></a></h2>
+<h2 id="calculatelightlight-light-material-mat"><a class="header" href="#calculatelightlight-light-material-mat"><strong>calculateLight(<a href="shaders/functions/../data-types/Light.html">Light</a> light, Material mat)</strong></a></h2>
 <p>Same as <a href="shaders/functions/./lighting.html#calculatelightlight-light-vec3-n-vec3-spec-material">calculateLight</a> but uses a the normal passed from the vertex shader.
 <br>
 <br>
 <strong>Returns: Lighting</strong>
 <br>
 <strong>Return Type: vec4</strong></p>
-<h2 id="calculatelightlight-light-vec3-n"><a class="header" href="#calculatelightlight-light-vec3-n"><strong>calculateLight(Light light, vec3 n)</strong></a></h2>
+<h2 id="calculatelightlight-light-vec3-n"><a class="header" href="#calculatelightlight-light-vec3-n"><strong>calculateLight(<a href="shaders/functions/../data-types/Light.html">Light</a> light, vec3 n)</strong></a></h2>
 <p>Same as <a href="shaders/functions/./lighting.html#calculatelightlight-light-vec3-n-vec3-spec-material">calculateLight</a> but uses a default material and no specular multiplier. The default material is: <code>Material(10.0f, 1.0f)</code>
 <br>
 <br>
 <strong>Returns: Lighting</strong>
 <br>
 <strong>Return Type: vec4</strong></p>
-<h2 id="calculatelightlight-light-vec3-n-material-material"><a class="header" href="#calculatelightlight-light-vec3-n-material-material"><strong>calculateLight(Light light, vec3 n, Material material)</strong></a></h2>
+<h2 id="calculatelightlight-light-vec3-n-material-material"><a class="header" href="#calculatelightlight-light-vec3-n-material-material"><strong>calculateLight(<a href="shaders/functions/../data-types/Light.html">Light</a> light, vec3 n, Material material)</strong></a></h2>
 <p>Same as <a href="shaders/functions/./lighting.html#calculatelightlight-light-vec3-n-vec3-spec-material">calculateLight</a> but uses no specular multiplier.</p>
 <h2 id="correctgammavec4-col-float-gamma"><a class="header" href="#correctgammavec4-col-float-gamma"><strong>correctGamma(vec4 col, float gamma)</strong></a></h2>
 <p>Corrects the gamma of a color. After the final color has been calculated, this is used to correct the gamma of the final color.

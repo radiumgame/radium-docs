@@ -3,7 +3,7 @@
     <head>
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
-        <title>Vector2 - Radium Documentation</title>
+        <title>MeshFilter - Radium Documentation</title>
         <!-- Custom HTML head -->
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="description" content="">
@@ -75,7 +75,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded "><a href="../../welcome.html"><strong aria-hidden="true">1.</strong> Welcome!</a></li><li class="chapter-item expanded "><a href="../../install.html"><strong aria-hidden="true">2.</strong> Installing Radium</a></li><li class="chapter-item expanded "><a href="../../editor/index.html"><strong aria-hidden="true">3.</strong> Editor Reference</a></li><li class="chapter-item expanded "><a href="../../scripting/index.html"><strong aria-hidden="true">4.</strong> Scripting Reference</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../scripting/Transform.html"><strong aria-hidden="true">4.1.</strong> Transform</a></li><li class="chapter-item expanded "><a href="../../scripting/GameObject.html"><strong aria-hidden="true">4.2.</strong> GameObject</a></li><li class="chapter-item expanded "><a href="../../scripting/Component.html"><strong aria-hidden="true">4.3.</strong> Components</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../scripting/components/MeshFilter.html"><strong aria-hidden="true">4.3.1.</strong> MeshFilter</a></li><li class="chapter-item expanded "><a href="../../scripting/components/MeshRenderer.html"><strong aria-hidden="true">4.3.2.</strong> Mesh Renderer</a></li></ol></li><li class="chapter-item expanded "><a href="../../scripting/math.html"><strong aria-hidden="true">4.4.</strong> Math</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../scripting/math/Vector2.html" class="active"><strong aria-hidden="true">4.4.1.</strong> Vector2</a></li><li class="chapter-item expanded "><a href="../../scripting/math/Vector3.html"><strong aria-hidden="true">4.4.2.</strong> Vector3</a></li></ol></li><li class="chapter-item expanded "><a href="../../scripting/graphics.html"><strong aria-hidden="true">4.5.</strong> Graphics</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../scripting/graphics/Color.html"><strong aria-hidden="true">4.5.1.</strong> Color</a></li><li class="chapter-item expanded "><a href="../../scripting/graphics/Material.html"><strong aria-hidden="true">4.5.2.</strong> Material</a></li><li class="chapter-item expanded "><a href="../../scripting/graphics/Mesh.html"><strong aria-hidden="true">4.5.3.</strong> Mesh</a></li></ol></li></ol></li></ol>
+                <ol class="chapter"><li class="chapter-item expanded "><a href="../../welcome.html"><strong aria-hidden="true">1.</strong> Welcome!</a></li><li class="chapter-item expanded "><a href="../../install.html"><strong aria-hidden="true">2.</strong> Installing Radium</a></li><li class="chapter-item expanded "><a href="../../editor/index.html"><strong aria-hidden="true">3.</strong> Editor Reference</a></li><li class="chapter-item expanded "><a href="../../scripting/index.html"><strong aria-hidden="true">4.</strong> Scripting Reference</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../scripting/Transform.html"><strong aria-hidden="true">4.1.</strong> Transform</a></li><li class="chapter-item expanded "><a href="../../scripting/GameObject.html"><strong aria-hidden="true">4.2.</strong> GameObject</a></li><li class="chapter-item expanded "><a href="../../scripting/Component.html"><strong aria-hidden="true">4.3.</strong> Components</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../scripting/components/MeshFilter.html" class="active"><strong aria-hidden="true">4.3.1.</strong> MeshFilter</a></li><li class="chapter-item expanded "><a href="../../scripting/components/MeshRenderer.html"><strong aria-hidden="true">4.3.2.</strong> Mesh Renderer</a></li></ol></li><li class="chapter-item expanded "><a href="../../scripting/math.html"><strong aria-hidden="true">4.4.</strong> Math</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../scripting/math/Vector2.html"><strong aria-hidden="true">4.4.1.</strong> Vector2</a></li><li class="chapter-item expanded "><a href="../../scripting/math/Vector3.html"><strong aria-hidden="true">4.4.2.</strong> Vector3</a></li></ol></li><li class="chapter-item expanded "><a href="../../scripting/graphics.html"><strong aria-hidden="true">4.5.</strong> Graphics</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../scripting/graphics/Color.html"><strong aria-hidden="true">4.5.1.</strong> Color</a></li><li class="chapter-item expanded "><a href="../../scripting/graphics/Material.html"><strong aria-hidden="true">4.5.2.</strong> Material</a></li><li class="chapter-item expanded "><a href="../../scripting/graphics/Mesh.html"><strong aria-hidden="true">4.5.3.</strong> Mesh</a></li></ol></li></ol></li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
@@ -136,86 +136,39 @@
                     <main>
                         <h1 id="properties"><a class="header" href="#properties">Properties</a></h1>
 <hr>
-<p>x (float)<br>
-y (float)</p>
+<p>material (<a href="../graphics/Material.html">Material</a>[])<br>
+mesh (<a href="../graphics/Mesh.html">Mesh</a>[])</p>
 <br>
 <h1 id="constructor"><a class="header" href="#constructor">Constructor</a></h1>
 <hr>
-<a href="./Vector2.html">Vector2</a>(x : float, y : float)
+Empty constructor
 <br>
-<h1 id="operations"><a class="header" href="#operations">Operations</a></h1>
-<hr>
-<p>+, -, *, /, +=, -=, *=, /=, ==, !=</p>
 <br>
 <h1 id="methods"><a class="header" href="#methods">Methods</a></h1>
 <hr>
-<h2 id="array"><a class="header" href="#array"><strong>array()</strong></a></h2>
-<p>Returns the vector as an array.
-<br>
-<strong>Returns: [x, y]</strong>
-<br>
-<strong>Return Type: Array[2]</strong></p>
-<h2 id="length"><a class="header" href="#length"><strong>length()</strong></a></h2>
-<p>Returns the length of the vector. Simply, the square root of the sum of the squares of the components.
-<br>
-<strong>Returns: <code>sqrt(x^2 + y^2)</code></strong>
-<br>
-<strong>Return Type: float</strong></p>
-<h2 id="normalize"><a class="header" href="#normalize"><strong>normalize()</strong></a></h2>
-<p>Returns the vector / length of the vector. Making the value between 0 and 1.
-<br>
-<strong>Returns: <code>Vector2(x / length, y / length)</code></strong>
-<br>
-<strong>Return Type: <a href="./Vector2.html">Vector2</a></strong>
-vector`</p>
-<h2 id="lerpother--vector2-t--float"><a class="header" href="#lerpother--vector2-t--float"><strong>lerp(other : <a href="./Vector2.html">Vector2</a>, t : float)</strong></a></h2>
-<p>Returns the transition between two vectors by t. t is between 0 and 1.
-<br>
-<strong>Returns: <code>Vector2(x + (other.x - x) * t, y + (other.y - y) * t)</code></strong>
-<br>
-<strong>Return Type: <a href="./Vector2.html">Vector2</a></strong></p>
-<h2 id="dotother--vector2"><a class="header" href="#dotother--vector2"><strong>dot(other : <a href="./Vector2.html">Vector2</a>)</strong></a></h2>
-<p>Returns the dot product of two vectors. The dot product is the sum of the products of the components.
-<br>
-<strong>Returns: <code>x * other.x + y * other.y</code></strong>
-<br>
-<strong>Return Type: float</strong></p>
-<h2 id="distanceother--vector2"><a class="header" href="#distanceother--vector2"><strong>distance(other : <a href="./Vector2.html">Vector2</a>)</strong></a></h2>
-<p>Returns the distance between two vectors.
-<br>
-<strong>Returns: <code>sqrt((x - other.x)^2 + (y - other.y)^2)</code></strong>
-<br>
-<strong>Return Type: float</strong></p>
-<h2 id="crossother--vector2"><a class="header" href="#crossother--vector2"><strong>cross(other : <a href="./Vector2.html">Vector2</a>)</strong></a></h2>
-<p>Returns the cross product of two vectors.
-<br>
-<strong>Returns: <code>Vector2(x * other.y - y * other.x, y * other.x - x * other.y)</code></strong>
-<br>
-<strong>Return Type: <a href="./Vector2.html">Vector2</a></strong></p>
-<br>
-<h1 id="class-methods"><a class="header" href="#class-methods">Class Methods</a></h1>
-<hr>
-<h2 id="zero"><a class="header" href="#zero"><strong>zero()</strong></a></h2>
-<p>Returns a zero vector.
-<br>
-<strong>Returns: <code>Vector2(0, 0, 0)</code></strong>
-<br>
-<strong>Return Type: <a href="./Vector2.html">Vector2</a></strong></p>
-<h2 id="one"><a class="header" href="#one"><strong>one()</strong></a></h2>
-<p>Returns a one vector.
-<br>
-<strong>Returns: <code>Vector2(1, 1, 1)</code></strong>
-<br>
-<strong>Return Type: <a href="./Vector2.html">Vector2</a></strong></p>
+<h2 id="updatematerial"><a class="header" href="#updatematerial"><strong>updateMaterial()</strong></a></h2>
+<p>Updates the materials properties.</p>
+<h2 id="setmaterialmaterial--material"><a class="header" href="#setmaterialmaterial--material"><strong>setMaterial(material : <a href="../graphics/Material.html">Material</a>)</strong></a></h2>
+<p>Sets the material of the mesh.</p>
+<h2 id="setmeshmesh--mesh"><a class="header" href="#setmeshmesh--mesh"><strong>setMesh(mesh : <a href="../graphics/Mesh.html">Mesh</a>)</strong></a></h2>
+<p>Sets the mesh of the mesh filter.</p>
+<h2 id="setmeshmesh--string"><a class="header" href="#setmeshmesh--string"><strong>setMesh(mesh : string)</strong></a></h2>
+<p>Sets the mesh type of the mesh filter. Valid types include:<br></p>
+<ul>
+<li>None</li>
+<li>Cube</li>
+<li>Sphere</li>
+<li>Plane</li>
+</ul>
 
                     </main>
 
                     <nav class="nav-wrapper" aria-label="Page navigation">
                         <!-- Mobile navigation buttons -->
-                            <a rel="prev" href="../../scripting/math.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                            <a rel="prev" href="../../scripting/Component.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                                 <i class="fa fa-angle-left"></i>
                             </a>
-                            <a rel="next" href="../../scripting/math/Vector3.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                            <a rel="next" href="../../scripting/components/MeshRenderer.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                                 <i class="fa fa-angle-right"></i>
                             </a>
                         <div style="clear: both"></div>
@@ -224,10 +177,10 @@ vector`</p>
             </div>
 
             <nav class="nav-wide-wrapper" aria-label="Page navigation">
-                    <a rel="prev" href="../../scripting/math.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                    <a rel="prev" href="../../scripting/Component.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                         <i class="fa fa-angle-left"></i>
                     </a>
-                    <a rel="next" href="../../scripting/math/Vector3.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                    <a rel="next" href="../../scripting/components/MeshRenderer.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                         <i class="fa fa-angle-right"></i>
                     </a>
             </nav>

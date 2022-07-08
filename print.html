@@ -137,6 +137,8 @@
                     <main>
                         <h1 id="welcome-to-radium"><a class="header" href="#welcome-to-radium">Welcome To Radium!</a></h1>
 <p>Radium is a game engine built with Java and the <a href="https://lwjgl.org" target="_blank">LWJGL</a> tools. The documentation will go over how to use the editor and all the tools, along with the scripting system. Radium is currently a fairly small project, only being worked on by one person. I do want the engine to grow to have most of the features modern day game engines should have, and all the tools necessary for creating a game. The whole engine is free and open source, so all features can stay free forever, never any payments. This also allows games to be distributed for free, without payment to Radium, making it great for all games.</p>
+<h1 id="notes"><a class="header" href="#notes">Notes</a></h1>
+<p>The documentation is based off of the development branch in Github, meaning the documentation might not be different than your editor version. There soon will be an editor updater, so you can update your editor to the latest version.</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="installing-radium"><a class="header" href="#installing-radium">Installing Radium</a></h1>
 <p>There is no official installer or executable currently for Radium, making the only way to install it is to download the source code and compile it yourself. As of now, Radium is only available for Windows.</p>
 <h1 id="downloading-from-github"><a class="header" href="#downloading-from-github">Downloading from Github</a></h1>
@@ -307,7 +309,7 @@ Empty constructor
 <strong>Returns: <a href="scripting/./GameObject.html">GameObject</a> Found</strong>
 <br>
 <strong>Return Type: <a href="scripting/./GameObject.html">GameObject</a></strong></p>
-<div style="break-before: page; page-break-before: always;"></div><h1 id="notes"><a class="header" href="#notes">Notes</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="notes-1"><a class="header" href="#notes-1">Notes</a></h1>
 <hr>
 All components below are inherited from this class. All the properties available in this class are available in all the components.
 <h1 id="properties-3"><a class="header" href="#properties-3">Properties</a></h1>
@@ -852,7 +854,7 @@ Empty constructor
 <p>Adds a bitangent to the mesh.</p>
 <h2 id="addindexindex--int"><a class="header" href="#addindexindex--int"><strong>addIndex(index : int)</strong></a></h2>
 <p>Adds an index to the mesh.</p>
-<div style="break-before: page; page-break-before: always;"></div><h1 id="notes-1"><a class="header" href="#notes-1">Notes</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="notes-2"><a class="header" href="#notes-2">Notes</a></h1>
 <hr>
 This class cannot be created. Do not instantiate, will throw an error.
 <h1 id="class-methods-3"><a class="header" href="#class-methods-3">Class Methods</a></h1>
@@ -950,7 +952,7 @@ This class cannot be created. Do not instantiate, will throw an error.
 <p><strong>Returns: If button is down</strong>
 <br>
 <strong>Return Type: bool</strong></p>
-<div style="break-before: page; page-break-before: always;"></div><h1 id="notes-2"><a class="header" href="#notes-2">Notes</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="notes-3"><a class="header" href="#notes-3">Notes</a></h1>
 <hr>
 This class cannot be created. Do not instantiate, will throw an error.
 <h1 id="class-methods-4"><a class="header" href="#class-methods-4">Class Methods</a></h1>
@@ -969,7 +971,7 @@ This class cannot be created. Do not instantiate, will throw an error.
 <strong>Returns: Time since game started</strong>
 <br>
 <strong>Return Type: float</strong></p>
-<div style="break-before: page; page-break-before: always;"></div><h1 id="notes-3"><a class="header" href="#notes-3">Notes</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="notes-4"><a class="header" href="#notes-4">Notes</a></h1>
 <p>Functions and variables that can be used in custom rendering. These do not work in the post processing shaders, only the rendering shaders.</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="properties-18"><a class="header" href="#properties-18">Properties</a></h1>
 <hr>
@@ -996,7 +998,7 @@ color (vec3)<br>
 intensity (float)<br>
 attenuation (float)<br>
 lightType (int)<br></p>
-<div style="break-before: page; page-break-before: always;"></div><h1 id="notes-4"><a class="header" href="#notes-4">Notes</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="notes-5"><a class="header" href="#notes-5">Notes</a></h1>
 <hr>
 These are variables imported from the editor and vertex shader.
 <h1 id="variables"><a class="header" href="#variables">Variables</a></h1>
@@ -1489,11 +1491,11 @@ return (1 / (1 + exp(-steepness * (depth - offset))));
 <strong>Returns: Screenspace Coordinate</strong>
 <br>
 <strong>Return Type: vec2</strong></p>
-<div style="break-before: page; page-break-before: always;"></div><h1 id="notes-5"><a class="header" href="#notes-5">Notes</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="notes-6"><a class="header" href="#notes-6">Notes</a></h1>
 <p>Find examples for systems such as scripting, shaders, and other development related tasks. This is a great place to learn how to use these systems as well.</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="your-first-script"><a class="header" href="#your-first-script">Your First Script</a></h1>
 <p>You will learn how to use the python scripting system to make a simple script. This script will be able to control the movement of a game object. It will use keyboard input and will move the game object in the direction of the arrow keys. You can see the <a href="examples/./first-script.html#final-product">final result</a> down at the bottom of the page.</p>
-<h1 id="notes-6"><a class="header" href="#notes-6">Notes</a></h1>
+<h1 id="notes-7"><a class="header" href="#notes-7">Notes</a></h1>
 <p>Make sure you have a project created. If you don't know how to do this, refer to the creating a project section of the <a href="examples/../install.html#creating-a-project">Installing Radium</a> guide.
 <br>
 <br>
